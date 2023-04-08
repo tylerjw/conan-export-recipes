@@ -1,0 +1,21 @@
+[package]
+name = "conan-export-recipes"
+version = "0.1.0"
+authors = ["Tyler Weaver", "maybe@tylerjw.dev"]
+edition = "2021"
+description = "Bulk export recipes in the folder structure of conan-center-index"
+readme = "README.md"
+license = "MIT OR Apache-2.0"
+keywords = ["conan"]
+categories = ["command-line-utilities"]
+repository = "https://github.com/tylerjw/conan-export-recipes"
+
+[dependencies]
+walkdir = "2"
+serde = { version = "1.0", features = ["derive"] }
+serde_yaml = "0.9"
+clap = { version = "4.2.1", features = ["derive"] }
+
+[[bin]]
+name = "conan-export-recipes"
+path = "src/main.rs"
